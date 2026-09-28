@@ -62,6 +62,6 @@
 
 ## Publications
 
-页面分隔线采用随机生成的 SVG 双笔触，主线约 2.3–2.9px。每次加载时为各条分隔线分别生成轻微起伏，生成后保持静止；覆盖页眉、栏目标题、教育/项目条目间、页脚、展开详情侧线和手机端个人资料下方。原始布局间距保留。
+页面分隔线采用随机生成的 SVG 双笔触，顶部页眉主线约 2.3–2.9px，其余主线约 1.15–1.45px。每次加载时为各条分隔线分别生成轻微起伏，生成后保持静止；覆盖页眉、栏目标题、教育/项目条目间、页脚、展开详情侧线和手机端个人资料下方。原始布局间距保留。
 
 Edit `publications.items` in `content.js` to add a title, repository URL and media configuration. Publications appear immediately before Projects and use the same landscape preview layout. `media.fit: "contain"` preserves the complete PAPAV diagram within the 16:9 frame; the default is a cropped `cover` preview. The top navigation contains Education, Publications, Projects and Experience. The sidebar retains the CV download.
