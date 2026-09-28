@@ -80,6 +80,17 @@ details p { color: var(--muted); line-height: 1.75; }
 .footer-inner { max-width: 1280px; padding: 25px 32px; margin: auto; font-size: 12px; }
 .footer-inner p { margin: 5px 0; }
 .footer-inner a { color: var(--muted); }
+.sketch-top, .sketch-bottom, .sketch-left { position: relative; }
+.sketch-top { border-top-color: transparent !important; }
+.sketch-bottom { border-bottom-color: transparent !important; }
+.sketch-top::before, .sketch-bottom::after, .sketch-left[open]::before {
+  content: ""; position: absolute; pointer-events: none; background-image: var(--sketch-line); background-repeat: no-repeat; background-size: 100% 100%;
+}
+.sketch-top::before, .sketch-bottom::after { left: 0; width: 100%; height: 12px; }
+.sketch-top::before { top: -6px; }
+.sketch-bottom::after { bottom: -6px; }
+.sketch-left[open] { border-left-color: transparent; }
+.sketch-left[open]::before { left: -7px; top: 0; width: 12px; height: 100%; }
 @media (max-width: 1000px) {
   .page-layout { grid-template-columns: 190px minmax(0,1fr); gap: 32px; padding-left: 24px; padding-right: 24px; }
   .masthead-inner { padding-left: 24px; padding-right: 24px; gap: 38px; }
@@ -105,4 +116,6 @@ details p { color: var(--muted); line-height: 1.75; }
   .education-entry { grid-template-columns: 72px minmax(0,1fr); gap: 15px; }
   .school-logo { width: 72px; height: 72px; }
   .education-body h3 { font-size: 18px; }
+  .sketch-mobile-bottom { position: relative; border-bottom-color: transparent; }
+  .sketch-mobile-bottom::after { content: ""; position: absolute; pointer-events: none; left: 0; bottom: -6px; width: 100%; height: 12px; background: var(--sketch-line) no-repeat; background-size: 100% 100%; }
 }

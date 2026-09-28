@@ -147,3 +147,30 @@ function updateHash() {
 }
 window.addEventListener('hashchange', updateHash);
 updateHash();
+
+// Draw once per page load: each divider gets its own gently uneven pen strokes.
+function handDrawnLine(vertical = false) {
+  function stroke(offset, width, opacity) {
+    let path = `M 0 ${(6 + offset).toFixed(2)}`;
+    for (let x = 0; x < 1000; x += 40) {
+      const control = 6 + offset + (Math.random() - 0.5) * 5;
+      const end = 6 + offset + (Math.random() - 0.5) * 2.4;
+      path += ` Q ${x + 20} ${control.toFixed(2)} ${x + 40} ${end.toFixed(2)}`;
+    }
+    return `<path d="${path}" fill="none" stroke="#514b61" stroke-width="${width.toFixed(2)}" stroke-opacity="${opacity}" stroke-linecap="round"/>`;
+  }
+  const strokes = stroke(0, 2.3 + Math.random() * 0.6, 0.52) + stroke((Math.random() - 0.5) * 1.8, 0.65, 0.18);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vertical ? '0 0 12 1000' : '0 0 1000 12'}" preserveAspectRatio="none">${vertical ? `<g transform="translate(12 0) rotate(90)">${strokes}</g>` : strokes}</svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+}
+[
+  ['.masthead, main h1, main h2', 'sketch-bottom'],
+  ['.education-entry + .education-entry, .research-entry + .research-entry, .page-footer', 'sketch-top'],
+  ['.author-profile', 'sketch-mobile-bottom'],
+  ['details', 'sketch-left']
+].forEach(([selector, className]) => {
+  document.querySelectorAll(selector).forEach(element => {
+    element.classList.add(className);
+    element.style.setProperty('--sketch-line', handDrawnLine(className === 'sketch-left'));
+  });
+});
