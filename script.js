@@ -47,20 +47,54 @@ content.education.items.forEach(item => {
   article.append(logo, body);
   document.getElementById('education-items').append(article);
 });
+function projectMedia(item) {
+  const frame = el('div', 'project-media');
+  const placeholder = el('div', 'project-media-placeholder');
+  placeholder.setAttribute('role', 'img');
+  placeholder.setAttribute('aria-label', `${item.title}: ${content.labels.projectPreview}`);
+  const symbol = el('span', 'preview-symbol', '▧');
+  symbol.setAttribute('aria-hidden', 'true');
+  placeholder.append(symbol, el('span', '', content.labels.projectPreview));
+  const media = item.media;
+  if (!media?.src) {
+    frame.append(placeholder);
+    return frame;
+  }
+  const element = el(media.type === 'video' ? 'video' : 'img');
+  element.style.objectPosition = media.position || '50% 50%';
+  if (media.type === 'video') {
+    element.controls = true;
+    element.playsInline = true;
+    element.preload = 'metadata';
+    element.setAttribute('aria-label', media.alt || item.title);
+    if (media.poster) element.poster = media.poster;
+  } else {
+    element.alt = media.alt || item.title;
+    element.loading = 'lazy';
+    element.decoding = 'async';
+  }
+  element.addEventListener('error', () => frame.replaceChildren(placeholder), {once: true});
+  element.src = media.src;
+  frame.append(element);
+  return frame;
+}
 content.research.items.forEach(item => {
   const article = el('article', 'research-entry');
+  article.id = `project-${item.id}`;
+  const body = el('div', 'research-body');
   const heading = el('h3');
   const link = el('a', '', item.title);
   link.href = item.url;
   link.target = '_blank';
   link.rel = 'noreferrer';
   heading.append(link);
-  article.append(heading, el('p', 'entry-meta', `${item.date} · ${item.category}`), el('p', '', item.summary));
+  body.append(heading, el('p', 'entry-meta', `${item.date} · ${item.category}`), el('p', 'project-description', item.summary));
   const detail = el('details');
   detail.id = `${item.id}-details`;
   detail.append(el('summary', '', content.labels.details));
   item.details.forEach(text => detail.append(el('p', '', text)));
-  article.append(detail);
+  body.append(detail);
+  article.append(projectMedia(item), body);
   document.getElementById('research-items').append(article);
 });
 content.experience.items.forEach(item => {

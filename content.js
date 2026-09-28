@@ -33,7 +33,8 @@ window.SITE_CONTENT = {
     "github": "GitHub",
     "cv": "Download CV",
     "details": "Project details",
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "projectPreview": "Project preview"
   },
   "education": {
     "title": "Education",
@@ -61,7 +62,29 @@ window.SITE_CONTENT = {
     "title": "Research & Projects",
     "items": [
       {
+        "id": "hmi",
+        "title": "integrating-sensoring-system-for-HMI",
+        "url": "https://github.com/Jackupjcup/integrating-sensoring-system-for-HMI",
+        "category": "MULTIMODAL SENSING & HMI",
+        "date": "2026",
+        "media": {
+          "type": "image",
+          "src": "assets/projects/hand-attitude-demo.gif",
+          "alt": "Sensor-based arm tracking alongside the corresponding Blender hand animation",
+          "position": "50% 50%",
+          "poster": ""
+        },
+        "summary": "A textile-based sensing platform combining a 14 × 10 pressure array and three IMUs for hand posture estimation, gesture recognition and Blender interaction.",
+        "details": [
+          "Built a pipeline for threaded sensor acquisition, calibration, tactile processing and IMU attitude estimation.",
+          "Used MediaPipe-assisted joint-angle annotation and CNN models for gesture/object classification and regression of 14 hand joint angles from pressure sequences.",
+          "Connected sensor predictions to Blender for hand/arm visualization and spatial drawing. The repository includes the project poster, demo video, datasets and model checkpoints.",
+          "Project by Nie Mingkai and Liu Runda; supervised by Prof. Chengkuo Lee and mentored by Dr. Xu Yunlong."
+        ]
+      },
+      {
         "id": "pose",
+        "media": {"type": "image", "src": "", "alt": "Human pose estimation preview", "position": "50% 50%", "poster": ""},
         "title": "Human-3D-2D-Keypoints-Detection",
         "url": "https://github.com/Jackupjcup/Human-3D-2D-Keypoints-Detection",
         "category": "COMPUTER VISION",
@@ -74,6 +97,7 @@ window.SITE_CONTENT = {
       },
       {
         "id": "depth",
+        "media": {"type": "image", "src": "", "alt": "Monocular depth estimation preview", "position": "50% 50%", "poster": ""},
         "title": "Lightweight_mono_depth_estimation",
         "url": "https://github.com/Jackupjcup/Lightweight_mono_depth_estimation",
         "category": "SPATIAL PERCEPTION",
@@ -87,6 +111,7 @@ window.SITE_CONTENT = {
       },
       {
         "id": "agents",
+        "media": {"type": "image", "src": "", "alt": "MAPPO project preview", "position": "50% 50%", "poster": ""},
         "title": "MAPPO",
         "url": "https://github.com/Jackupjcup/MAPPO",
         "category": "REINFORCEMENT LEARNING",
@@ -100,6 +125,7 @@ window.SITE_CONTENT = {
       },
       {
         "id": "antenna",
+        "media": {"type": "image", "src": "", "alt": "Antenna array simulation preview", "position": "50% 50%", "poster": ""},
         "title": "near-and-far-field-radiation-energy-and-array-antenna-radiation-patterns",
         "url": "https://github.com/Jackupjcup/near-and-far-field-radiation-energy-and-array-antenna-radiation-patterns",
         "category": "MODELING & SIMULATION",

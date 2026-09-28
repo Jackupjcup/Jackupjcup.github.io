@@ -28,7 +28,27 @@
 
 教育区显示学校全名、校徽、时间和专业。本科为 XDU，2022.09–2026.06，Electronic and Information Engineering，GPA 3.8/4.0；硕士为 NUS，2026.08–至今，M.Sc. in Electrical Engineering。数学竞赛奖和奖学金归入本科条目的 `awards` 数组；原 CV 中 NUS 苏州研究院的 Outstanding Student 仍保留在单独 Recognition 区。
 
-四个项目标题严格对应 GitHub repo 名称，标题点击后打开对应仓库；`research.items` 中 `title` 和 `url` 分别控制仓库名称和链接，不对名称改写。其他研究、实习和技能来自原 CV；CV 下载仍指向 `CV_26_7_7.docx`，可以换成此目录中的 PDF。
+项目标题严格对应 GitHub repo 名称，标题点击后打开对应仓库；`research.items` 中 `title` 和 `url` 分别控制仓库名称和链接，不对名称改写。HMI 项目已加入列表首位并展示完整演示 GIF。其他研究、实习和技能来自原 CV；CV 下载仍指向 `CV_26_7_7.docx`，可以换成此目录中的 PDF。
+
+## 项目图片 / GIF / 视频
+
+每个项目都有 `media` 键值配置，素材建议放在 `assets/projects/`：
+
+```js
+"media": {
+  "type": "image",
+  "src": "assets/projects/example.gif",
+  "alt": "描述图片或视频的内容",
+  "position": "50% 50%",
+  "poster": ""
+}
+```
+
+- 图片和 GIF 使用 `type: "image"`；MP4 / WebM 使用 `type: "video"`，显示原生播放控件。
+- `src` 留空时显示横向预览占位，填入文件路径即可替换。视频请填写实际媒体文件地址，而非 YouTube 网页链接。
+- 所有展示位固定为 **16:9**，通过 `object-fit: cover` 裁切显示，不拉伸或修改原文件。
+- `position` 控制裁切焦点，例如 `50% 20%` 更偏向顶部；视频的 `poster` 可选填封面图片路径。
+- 桌面端媒体在文字左侧；手机端媒体在文字上方，仍保持横向比例。
 
 手机使用顶部个人资料、下方正文的单栏布局。页面不依赖在线字体或第三方脚本。
 
