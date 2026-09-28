@@ -30,4 +30,12 @@
 
 四个项目标题严格对应 GitHub repo 名称，标题点击后打开对应仓库；`research.items` 中 `title` 和 `url` 分别控制仓库名称和链接，不对名称改写。其他研究、实习和技能来自原 CV；CV 下载仍指向 `CV_26_7_7.docx`，可以换成此目录中的 PDF。
 
-手机使用顶部个人资料、下方正文的单栏布局。页面不依赖在线字体或第三方脚本。尚未部署到 GitHub。
+手机使用顶部个人资料、下方正文的单栏布局。页面不依赖在线字体或第三方脚本。
+
+## 在线发布
+
+- 网站：https://jackupjcup.github.io/
+- 仓库：https://github.com/Jackupjcup/Jackupjcup.github.io
+- GitHub Pages 从 `main` 分支根目录发布，`.nojekyll` 保持纯静态文件部署。
+
+修改后在此目录执行 `git add`、`git commit`、`git push`，GitHub Pages 会自动重新发布。
