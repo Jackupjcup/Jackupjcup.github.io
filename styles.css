@@ -36,7 +36,7 @@ svg.link-icon { align-self: center; fill: none; stroke: currentColor; stroke-wid
 main { min-width: 0; }
 main:focus { outline: none; }
 main section + section { margin-top: 36px; }
-main h1, main h2 { font-size: 25px; line-height: 1.35; color: var(--blue); margin: 0 0 22px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+main h1, main h2 { font-size: 30px; line-height: 1.35; color: var(--blue); margin: 0 0 22px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
 main h3 { font-size: 20px; line-height: 1.4; margin: 0 0 6px; color: var(--blue); }
 main p { margin: 10px 0; }
 .education-entry { display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 24px; padding: 8px 0 25px; }
@@ -97,7 +97,6 @@ details p { color: var(--muted); line-height: 1.75; }
   .author-info h2 { margin-top: 0; }
   .author-bio { font-size: 13px; margin-bottom: 10px; }
   .author-links li { font-size: 12px; padding: 3px 0; }
-  main h1, main h2 { font-size: 23px; }
   main h3 { font-size: 18px; }
   .research-entry.has-media { grid-template-columns: 1fr; gap: 16px; }
   .skills-list { grid-template-columns: 1fr; gap: 4px; }
