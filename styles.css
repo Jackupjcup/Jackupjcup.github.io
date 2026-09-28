@@ -52,7 +52,7 @@ main p { margin: 10px 0; }
 .education-awards { padding-left: 18px; margin: 0; font-size: 14px; }
 .education-awards li { margin: 5px 0; }
 .research-entry h3 { overflow-wrap: anywhere; }
-.research-entry { display: grid; grid-template-columns: minmax(180px, 34%) minmax(0, 1fr); gap: 24px; align-items: start; }
+.research-entry.has-media { display: grid; grid-template-columns: minmax(180px, 34%) minmax(0, 1fr); gap: 24px; align-items: start; }
 .research-body { min-width: 0; }
 .research-entry + .research-entry { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line); }
 .project-media { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #e8e3d8; border-radius: 3px; }
@@ -101,7 +101,7 @@ details p { color: var(--muted); line-height: 1.75; }
   h1 { font-size: 27px; }
   main h2 { font-size: 23px; }
   main h3 { font-size: 18px; }
-  .research-entry { grid-template-columns: 1fr; gap: 16px; }
+  .research-entry.has-media { grid-template-columns: 1fr; gap: 16px; }
   .skills-list { grid-template-columns: 1fr; gap: 4px; }
   .skills-list dd { margin-bottom: 12px; }
   .footer-inner { padding: 22px 20px; }

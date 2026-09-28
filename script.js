@@ -48,6 +48,8 @@ content.education.items.forEach(item => {
   document.getElementById('education-items').append(article);
 });
 function projectMedia(item) {
+  const media = item.media;
+  if (!media?.src?.trim()) return null;
   const frame = el('div', 'project-media');
   const placeholder = el('div', 'project-media-placeholder');
   placeholder.setAttribute('role', 'img');
@@ -55,11 +57,6 @@ function projectMedia(item) {
   const symbol = el('span', 'preview-symbol', '▧');
   symbol.setAttribute('aria-hidden', 'true');
   placeholder.append(symbol, el('span', '', content.labels.projectPreview));
-  const media = item.media;
-  if (!media?.src) {
-    frame.append(placeholder);
-    return frame;
-  }
   const element = el(media.type === 'video' ? 'video' : 'img');
   element.style.objectPosition = media.position || '50% 50%';
   if (media.type === 'video') {
@@ -94,7 +91,12 @@ content.research.items.forEach(item => {
   detail.append(el('summary', '', content.labels.details));
   item.details.forEach(text => detail.append(el('p', '', text)));
   body.append(detail);
-  article.append(projectMedia(item), body);
+  const media = projectMedia(item);
+  if (media) {
+    article.classList.add('has-media');
+    article.append(media);
+  }
+  article.append(body);
   document.getElementById('research-items').append(article);
 });
 content.experience.items.forEach(item => {

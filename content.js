@@ -125,7 +125,7 @@ window.SITE_CONTENT = {
       },
       {
         "id": "antenna",
-        "media": {"type": "image", "src": "", "alt": "Antenna array simulation preview", "position": "50% 50%", "poster": ""},
+        "media": {"type": "image", "src": "assets/projects/antenna-pattern.png", "alt": "MATLAB antenna array calculation interface showing a circular-array far-field pattern in 2D and 3D", "position": "50% 50%", "poster": ""},
         "title": "near-and-far-field-radiation-energy-and-array-antenna-radiation-patterns",
         "url": "https://github.com/Jackupjcup/near-and-far-field-radiation-energy-and-array-antenna-radiation-patterns",
         "category": "MODELING & SIMULATION",
