@@ -149,7 +149,7 @@ window.addEventListener('hashchange', updateHash);
 updateHash();
 
 // Draw once per page load: each divider gets its own gently uneven pen strokes.
-function handDrawnLine(vertical = false) {
+function handDrawnLine(vertical = false, bold = false) {
   function stroke(offset, width, opacity) {
     let path = `M 0 ${(6 + offset).toFixed(2)}`;
     for (let x = 0; x < 1000; x += 40) {
@@ -159,7 +159,7 @@ function handDrawnLine(vertical = false) {
     }
     return `<path d="${path}" fill="none" stroke="#514b61" stroke-width="${width.toFixed(2)}" stroke-opacity="${opacity}" stroke-linecap="round"/>`;
   }
-  const strokes = stroke(0, 2.3 + Math.random() * 0.6, 0.52) + stroke((Math.random() - 0.5) * 1.8, 0.65, 0.18);
+  const strokes = stroke(0, bold ? 2.3 + Math.random() * 0.6 : 1.15 + Math.random() * 0.3, 0.52) + stroke((Math.random() - 0.5) * 1.8, bold ? 0.65 : 0.35, bold ? 0.18 : 0.12);
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${vertical ? '0 0 12 1000' : '0 0 1000 12'}" preserveAspectRatio="none">${vertical ? `<g transform="translate(12 0) rotate(90)">${strokes}</g>` : strokes}</svg>`;
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
 }
@@ -171,6 +171,6 @@ function handDrawnLine(vertical = false) {
 ].forEach(([selector, className]) => {
   document.querySelectorAll(selector).forEach(element => {
     element.classList.add(className);
-    element.style.setProperty('--sketch-line', handDrawnLine(className === 'sketch-left'));
+    element.style.setProperty('--sketch-line', handDrawnLine(className === 'sketch-left', element.matches('.masthead')));
   });
 });
