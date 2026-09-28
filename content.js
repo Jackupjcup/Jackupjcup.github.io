@@ -7,9 +7,9 @@ window.SITE_CONTENT = {
   },
   "navigation": {
     "education": "Education",
-    "research": "Research",
-    "experience": "Experience",
-    "cv": "CV"
+    "projects": "Projects",
+    "publications": "Publications",
+    "experience": "Experience"
   },
   "profile": {
     "name": "Runda Liu",
@@ -58,8 +58,8 @@ window.SITE_CONTENT = {
       }
     ]
   },
-  "research": {
-    "title": "Research & Projects",
+  "projects": {
+    "title": "Projects",
     "items": [
       {
         "id": "hmi",
@@ -136,6 +136,24 @@ window.SITE_CONTENT = {
           "Implemented near-field electromagnetic energy calculations on an observation plane at a specified distance and generated visual heatmaps.",
           "Computed three-dimensional far-field radiation patterns (PAT), decomposed array factors (AF) and element factors (EP), and visualized the results in sine space."
         ]
+      }
+    ]
+  },
+  "publications": {
+    "title": "Publications",
+    "items": [
+      {
+        "id": "multimodal-embodied-agents",
+        "title": "Survey on Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use",
+        "url": "https://github.com/showlab/Awesome-Multimodal-Embodied-Agent",
+        "media": {
+          "type": "image",
+          "src": "assets/publications/papav-teaser.png",
+          "alt": "PAPAV overview: Perceive, Anticipate, Plan, Act and Verify for computer-use and robot-use",
+          "position": "50% 50%",
+          "fit": "contain",
+          "poster": ""
+        }
       }
     ]
   },

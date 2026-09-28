@@ -18,7 +18,7 @@
 | `links` | GitHub、邮箱、CV 文件路径 |
 | `labels` | 链接和展开详情的文字 |
 | `education.title` / `education.items` | 教育区标题，以及学校、校徽、时间、专业、GPA、校内经历下的奖项 |
-| `research.items` | 研究项目及详情 |
+| `projects.items` | 研究项目及详情 |
 | `experience.items` | 实习经历 |
 | `awards.items` | 奖项 |
 | `skills.items` | 技能 |
@@ -28,7 +28,7 @@
 
 教育区显示学校全名、校徽、时间和专业。本科为 XDU，2022.09–2026.06，Electronic and Information Engineering，GPA 3.8/4.0；硕士为 NUS，2026.08–至今，M.Sc. in Electrical Engineering。数学竞赛奖和奖学金归入本科条目的 `awards` 数组；原 CV 中 NUS 苏州研究院的 Outstanding Student 仍保留在单独 Recognition 区。
 
-项目标题严格对应 GitHub repo 名称，标题点击后打开对应仓库；`research.items` 中 `title` 和 `url` 分别控制仓库名称和链接，不对名称改写。HMI 项目已加入列表首位并展示完整演示 GIF。其他研究、实习和技能来自原 CV；CV 下载仍指向 `CV_26_7_7.docx`，可以换成此目录中的 PDF。
+项目标题严格对应 GitHub repo 名称，标题点击后打开对应仓库；`projects.items` 中 `title` 和 `url` 分别控制仓库名称和链接，不对名称改写。HMI 项目已加入列表首位并展示完整演示 GIF。其他研究、实习和技能来自原 CV；CV 下载仍指向 `CV_26_7_7.docx`，可以换成此目录中的 PDF。
 
 ## 项目图片 / GIF / 视频
 
@@ -59,3 +59,7 @@
 - GitHub Pages 从 `main` 分支根目录发布，`.nojekyll` 保持纯静态文件部署。
 
 修改后在此目录执行 `git add`、`git commit`、`git push`，GitHub Pages 会自动重新发布。
+
+## Publications
+
+Edit `publications.items` in `content.js` to add a title, repository URL and media configuration. Publications appear immediately after Projects and use the same landscape preview layout. `media.fit: "contain"` preserves the complete PAPAV diagram within the 16:9 frame; the default is a cropped `cover` preview. The top navigation contains Education, Projects, Publications and Experience. The sidebar retains the CV download.

@@ -59,6 +59,7 @@ function projectMedia(item) {
   placeholder.append(symbol, el('span', '', content.labels.projectPreview));
   const element = el(media.type === 'video' ? 'video' : 'img');
   element.style.objectPosition = media.position || '50% 50%';
+  if (media.fit === 'contain') element.style.objectFit = 'contain';
   if (media.type === 'video') {
     element.controls = true;
     element.playsInline = true;
@@ -75,7 +76,7 @@ function projectMedia(item) {
   frame.append(element);
   return frame;
 }
-content.research.items.forEach(item => {
+content.projects.items.forEach(item => {
   const article = el('article', 'research-entry');
   article.id = `project-${item.id}`;
   const body = el('div', 'research-body');
@@ -97,7 +98,26 @@ content.research.items.forEach(item => {
     article.append(media);
   }
   article.append(body);
-  document.getElementById('research-items').append(article);
+  document.getElementById('projects-items').append(article);
+});
+content.publications.items.forEach(item => {
+  const article = el('article', 'research-entry publication-entry');
+  article.id = `publication-${item.id}`;
+  const body = el('div', 'research-body');
+  const heading = el('h3');
+  const link = el('a', '', item.title);
+  link.href = item.url;
+  link.target = '_blank';
+  link.rel = 'noreferrer';
+  heading.append(link);
+  body.append(heading);
+  const media = projectMedia(item);
+  if (media) {
+    article.classList.add('has-media');
+    article.append(media);
+  }
+  article.append(body);
+  document.getElementById('publications-items').append(article);
 });
 content.experience.items.forEach(item => {
   const article = el('article', 'experience-entry');
