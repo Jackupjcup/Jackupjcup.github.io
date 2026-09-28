@@ -62,4 +62,4 @@
 
 ## Publications
 
-Edit `publications.items` in `content.js` to add a title, repository URL and media configuration. Publications appear immediately after Projects and use the same landscape preview layout. `media.fit: "contain"` preserves the complete PAPAV diagram within the 16:9 frame; the default is a cropped `cover` preview. The top navigation contains Education, Projects, Publications and Experience. The sidebar retains the CV download.
+Edit `publications.items` in `content.js` to add a title, repository URL and media configuration. Publications appear immediately before Projects and use the same landscape preview layout. `media.fit: "contain"` preserves the complete PAPAV diagram within the 16:9 frame; the default is a cropped `cover` preview. The top navigation contains Education, Publications, Projects and Experience. The sidebar retains the CV download.
