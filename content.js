@@ -97,7 +97,7 @@ window.SITE_CONTENT = {
       },
       {
         "id": "depth",
-        "media": {"type": "image", "src": "", "alt": "Monocular depth estimation preview", "position": "50% 50%", "poster": ""},
+        "media": {"type": "image", "src": "assets/projects/depth-comparison.jpg", "alt": "Cropped comparison of RGB input, normalized ground-truth depth, DA3 teacher depth and student-predicted depth", "position": "50% 50%", "poster": ""},
         "title": "Lightweight_mono_depth_estimation",
         "url": "https://github.com/Jackupjcup/Lightweight_mono_depth_estimation",
         "category": "SPATIAL PERCEPTION",
