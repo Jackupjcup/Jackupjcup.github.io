@@ -28,7 +28,7 @@
 
 教育区显示学校全名、校徽、时间和专业。本科为 XDU，2022.09–2026.06，Electronic and Information Engineering，GPA 3.8/4.0；硕士为 NUS，2026.08–至今，M.Sc. in Electrical Engineering。数学竞赛奖和奖学金归入本科条目的 `awards` 数组；原 CV 中 NUS 苏州研究院的 Outstanding Student 仍保留在单独 Recognition 区。
 
-项目标题严格对应 GitHub repo 名称，标题点击后打开对应仓库；`projects.items` 中 `title` 和 `url` 分别控制仓库名称和链接，不对名称改写。HMI 项目已加入列表首位并展示完整演示 GIF。其他研究、实习和技能来自原 CV；CV 下载仍指向 `CV_26_7_7.docx`，可以换成此目录中的 PDF。
+项目标题严格对应 GitHub repo 名称，标题点击后打开对应仓库；`projects.items` 中 `title` 和 `url` 分别控制仓库名称和链接，不对名称改写。HMI 项目已加入列表首位并展示完整演示 GIF。其他研究、实习和技能来自原 CV；CV 下载仍指向 `CV_26_7_7.pdf`，可以换成此目录中的 PDF。
 
 ## 项目图片 / GIF / 视频
 

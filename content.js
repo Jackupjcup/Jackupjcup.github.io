@@ -25,7 +25,7 @@ window.SITE_CONTENT = {
     "github": "https://github.com/Jackupjcup",
     "email": "rundaliu@u.nus.edu",
     "alternateEmail": "Jackup_Liu@outlook.com",
-    "cv": "CV_26_7_7.docx"
+    "cv": "CV_26_7_7.pdf"
   },
   "labels": {
     "email": "Email",
@@ -42,13 +42,13 @@ window.SITE_CONTENT = {
     "items": [
       {
         "id": "nus", "school": "National University of Singapore (NUS)",
-        "url": "https://www.nus.edu.sg/", "logo": "assets/nus-logo.png",
+        "url": "https://www.nus.edu.sg/", "logo": "assets/icons/nus-crest.svg",
         "date": "Aug 2026 – Present", "degree": "M.Sc. in Electrical Engineering",
         "location": "Singapore", "grade": "", "awards": []
       },
       {
         "id": "xdu", "school": "Xidian University (XDU)",
-        "url": "https://www.xidian.edu.cn/", "logo": "assets/xdu-logo.png",
+        "url": "https://www.xidian.edu.cn/", "logo": "assets/icons/xdu-crest.svg",
         "date": "Sep 2022 – Jun 2026", "degree": "B.Eng. in Electronic and Information Engineering",
         "location": "Xi’an, China", "grade": "GPA: 3.8 / 4.0",
         "awards": [
