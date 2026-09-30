@@ -21,7 +21,6 @@
 | `projects.items` | 研究项目及详情 |
 | `experience.items` | 实习经历 |
 | `awards.items` | 奖项 |
-| `skills.items` | 技能 |
 | `footer` | 页脚文字和参考链接 |
 
 `items` 数组可增删条目；研究条目 `id` 使用唯一英文标识。所有编辑文字均以纯文本插入。

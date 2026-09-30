@@ -48,7 +48,7 @@ window.SITE_CONTENT = {
       },
       {
         "id": "xdu", "school": "Xidian University (XDU)",
-        "url": "https://www.xidian.edu.cn/", "logo": "assets/icons/xdu-crest.svg",
+        "url": "https://www.xidian.edu.cn/", "logo": "assets/icons/xdu-crest-hd.png",
         "date": "Sep 2022 – Jun 2026", "degree": "B.Eng. in Electronic and Information Engineering",
         "location": "Xi’an, China", "grade": "GPA: 3.8 / 4.0",
         "awards": [
@@ -180,23 +180,6 @@ window.SITE_CONTENT = {
         "date": "2026",
         "title": "Outstanding Student of ECE — Class of 2026",
         "organization": "NUS (Suzhou) Research Institute"
-      }
-    ]
-  },
-  "skills": {
-    "title": "Skills & tools",
-    "items": [
-      {
-        "label": "Programming",
-        "value": "Python · MATLAB"
-      },
-      {
-        "label": "Frameworks & computing",
-        "value": "PyTorch · TensorFlow · CUDA · Linux"
-      },
-      {
-        "label": "Vision & simulation",
-        "value": "Computer Vision · Blender · Unreal Engine"
       }
     ]
   },

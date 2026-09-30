@@ -132,9 +132,6 @@ content.awards.items.forEach(item => {
   row.append(el('span', 'award-date', `${item.date} · `), el('span', '', item.title), el('span', 'award-organization', item.organization));
   document.getElementById('award-items').append(row);
 });
-content.skills.items.forEach(item => {
-  document.getElementById('skill-items').append(el('dt', '', item.label), el('dd', '', item.value));
-});
 function updateHash() {
   const id = location.hash.slice(1);
   const target = document.getElementById(id);
