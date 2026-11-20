@@ -31,7 +31,7 @@ window.SITE_CONTENT = {
     "email": "Email",
     "alternateEmail": "Personal email",
     "github": "GitHub",
-    "cv": "Download CV",
+    "cv": "View CV",
     "details": "Project details",
     "skip": "Skip to content",
     "projectPreview": "Project preview"
