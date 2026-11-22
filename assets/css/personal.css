@@ -1,0 +1,95 @@
+/* Personal content and typography using the original template's card styling. */
+@font-face {
+    font-family: Tanker;
+    src: url('../fonts/tanker/Tanker-Regular.woff2') format('woff2'),
+         url('../fonts/tanker/Tanker-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: Pally;
+    src: url('../fonts/pally/Pally-Regular.woff2') format('woff2'),
+         url('../fonts/pally/Pally-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+@font-face {
+    font-family: Pally;
+    src: url('../fonts/pally/Pally-Medium.woff2') format('woff2'),
+         url('../fonts/pally/Pally-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+body { font-family: Pally, Arial, sans-serif; font-size: 16px; font-weight: 400; padding-top: 6.5rem; }
+/* Tanker headings with Pally Regular body text. */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.navbar-brand, .navbar-brand strong {
+    font-family: Tanker, Pally, Arial, sans-serif;
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: 0.025em;
+}
+h6, .h6 { font-size: 1.25rem; }
+.navbar { min-height: 76px; padding: 12px 16px; }
+.navbar > .container-lg { max-width: 1280px; }
+.navbar-brand { font-size: 1.75rem; }
+.navbar-nav { gap: 8px; }
+.navbar-nav .nav-link { font-family: Pally, Arial, sans-serif; font-weight: 500; font-size: 1.25rem; }
+.small, small { font-size: 14px; }
+.project-preview { max-height: 190px; object-fit: contain; }
+.project-summary { font-size: 16px; }
+.education-logo { width: 30px; height: 30px; object-fit: contain; }
+.education-date-location { display: flex; flex-wrap: wrap; gap: 0 16px; }
+.entry-meta { color: #6c757d; font-size: 14px; }
+.entry-title { overflow-wrap: anywhere; }
+.publication-cover { object-fit: contain; max-height: 220px; }
+.profile-links { font-size: 14px; overflow-wrap: anywhere; }
+.profile-avatar { border-radius: 16px; }
+.about-card-body { padding: 32px; }
+.about-profile { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; align-items: start; }
+.about-avatar { display: block; width: 200px; height: 200px; object-fit: cover; }
+.about-content { min-width: 0; }
+.about-positions { color: #6c757d; }
+.about-links { display: flex; flex-wrap: wrap; gap: 10px 20px; font-size: 14px; overflow-wrap: anywhere; }
+.email-text { font-family: Pally, Arial, sans-serif; }
+.last-updated { font-family: Pally, Arial, sans-serif; font-weight: 400; font-style: normal; }
+/* A static print layer on each surface, including its text and illustrations.
+   Tune grain strength here; size is in CSS pixels on desktop and mobile alike. */
+:root { --print-grain-opacity: 0.20; --print-grain-size: 1280px; }
+main .bg-white.shadow-sm, .footer { position: relative; isolation: isolate; }
+.navbar { isolation: isolate; }
+main .bg-white.shadow-sm::after, .navbar::after, .footer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    background: url('../textures/newsprint-grain.svg') repeat;
+    background-size: var(--print-grain-size) var(--print-grain-size);
+    opacity: var(--print-grain-opacity);
+    pointer-events: none;
+}
+#projects::after { background-position: -173px -89px; }
+.navbar::after { background-position: -57px -211px; }
+.footer::after { background-position: -319px -43px; }
+@media print {
+    main .bg-white.shadow-sm::after, .navbar::after, .footer::after { display: none; }
+}
+@media (max-width: 575px) {
+    body { padding-top: 5.5rem; }
+    .navbar { min-height: 64px; padding: 8px 16px; }
+    .navbar-brand { font-size: 1.5rem; }
+    .navbar-nav { gap: 0; }
+    .navbar-nav .nav-link { font-size: 1.125rem; }
+}
+@media (max-width: 767px) {
+    .about-card-body { padding: 24px; }
+    .about-profile { grid-template-columns: 1fr; gap: 24px; }
+    .about-avatar { width: 160px; height: 160px; }
+    .project-preview { max-height: 230px; }
+    .publication-cover { max-height: 240px; }
+}

@@ -1,55 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<!-- Template: https://github.com/luost26/academic-homepage -->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Runda Liu — XDU undergraduate, NUS graduate studies.">
-  <title>Runda Liu | Academic Homepage</title>
-  <link rel="stylesheet" href="styles.css?v=20261120-rounded-avatar">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Runda Liu, M.Sc. student at the National University of Singapore. Embodied agents and robot learning.">
+    <title>Homepage - Runda Liu</title>
+    <!-- Fetch custom fonts in parallel with CSS so text first paints in Tanker/Pally. -->
+    <link rel="preload" href="/assets/fonts/tanker/Tanker-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/pally/Pally-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/pally/Pally-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/personal.css">
 </head>
-<body>
-  <a class="skip-link" href="#main" data-text="labels.skip">Skip to content</a>
-  <header class="masthead">
-    <div class="masthead-inner">
-      <a class="site-title" href="#education" data-text="profile.name">Runda Liu</a>
-      <nav aria-label="Main navigation">
-        <a href="#education" data-text="navigation.education">Education</a>
-        <a href="#publications" data-text="navigation.publications">Publications</a>
-        <a href="#projects" data-text="navigation.projects">Projects</a>
-        <a href="#experience" data-text="navigation.experience">Experience</a>
-      </nav>
+<body class="bg-light d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-sm navbar-light fixed-top mb-5 shadow-sm">
+    <div class="container-lg">
+        <a class="navbar-brand" href="/index.html"><strong>Runda Liu</strong></a>
+        <button class="navbar-toggler" style="font-size: 1em; padding: 0.5em;" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-map"></i> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Home</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/publications.html">Publications</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="/projects.html">Projects</a>
+                </li>
+                
+            </ul>
+        </div>
     </div>
-  </header>
-  <div class="page-layout">
-    <aside class="author-profile" aria-label="Author profile">
-      <img class="author-avatar" src="assets/avatar.png" width="175" height="175" alt="Runda Liu">
-      <div class="author-info">
-        <h2 data-text="profile.name">Runda Liu</h2>
-        <p class="author-bio" data-text="profile.field"></p>
-        <ul class="author-links">
-          <li><img class="link-icon" src="assets/icons/xdu-crest-hd.png" alt=""><span><span data-text="profile.undergraduateSchool"></span> · <span data-text="profile.undergraduateLabel"></span></span></li>
-          <li><img class="link-icon" src="assets/icons/nus-crest.svg" alt=""><span><span data-text="profile.graduateSchool"></span> · <span data-text="profile.graduateLabel"></span></span></li>
-          <li><img class="link-icon" src="assets/icons/nus-crest.svg" alt=""><a data-email="links.email" data-text="labels.email"></a></li>
-          <li><img class="link-icon" src="assets/icons/outlook.svg" alt=""><a data-email="links.alternateEmail" data-text="labels.alternateEmail"></a></li>
-          <li><img class="link-icon" src="assets/icons/github.svg" alt=""><a data-link="links.github" data-text="labels.github" target="_blank" rel="noreferrer"></a></li>
-          <li><img class="link-icon" src="assets/icons/file.svg" alt=""><a data-link="links.cv" data-text="labels.cv" target="_blank" rel="noopener noreferrer"></a></li>
-        </ul>
-      </div>
-    </aside>
-    <main id="main" tabindex="-1">
-      <section id="education" aria-labelledby="education-title">
-        <h1 id="education-title" data-text="education.title">Education</h1>
-        <div id="education-items"></div>
-      </section>
-      <section id="publications" aria-labelledby="publications-title"><h2 id="publications-title" data-text="publications.title"></h2><div id="publications-items"></div></section>
-      <section id="projects" aria-labelledby="projects-title"><span id="research" aria-hidden="true"></span><h2 id="projects-title" data-text="projects.title"></h2><div id="projects-items"></div></section>
-      <section id="experience" aria-labelledby="experience-title"><h2 id="experience-title" data-text="experience.title"></h2><div id="experience-items"></div></section>
-      <section id="awards" aria-labelledby="awards-title"><h2 id="awards-title" data-text="awards.title"></h2><ul id="award-items" class="award-list"></ul></section>
-      <noscript><p>Please enable JavaScript to view all content, or <a href="CV_26_7_7.pdf">download the CV</a>.</p></noscript>
-    </main>
-  </div>
-  <footer class="page-footer"><div class="footer-inner"><p><span data-text="profile.name"></span> · <span data-text="footer.note"></span></p><p><a data-link="footer.referenceUrl" data-text="footer.reference" target="_blank" rel="noreferrer"></a></p></div></footer>
-  <script src="content.js?v=20261120-cv-label"></script>
-  <script src="script.js?v=20260930-clean-lines"></script>
+</nav>
+
+    <main class="flex-grow-1 flex-shrink-0 container-lg">
+<div class="row">
+    <div class="col-12">
+
+        <section id="about" class="card border-0 shadow-sm bg-white">
+    <div class="card-body about-card-body">
+        <h2 class="h3 mb-4">About Me</h2>
+        <div class="about-profile">
+            
+            <img src="/media/profile/avatar.png" alt="Runda Liu" class="profile-avatar about-avatar">
+            
+            <div class="about-content">
+                <h3 class="h4 mb-2">Runda Liu</h3>
+                <div class="about-positions mb-3">
+                    <div>M.Sc. Student in Electrical Engineering</div><div>National University of Singapore</div>
+                </div>
+                <div class="text-profile-bio" >
+                    <p>Hi, I am a M.Sc. student in Electrical Engineering at the National University of Singapore. I received my B.Eng. in Electronic and Information Engineering from Xidian University. My interests include <strong>embodied agent</strong> and <strong>robot learning</strong>. My projects span human pose estimation, lightweight monocular depth estimation, sensor-based human–machine interaction, and multi-agent task allocation.</p>
+                </div>
+                <div class="about-links">
+                    <a class="email-text" href="mailto:&#114;&#117;&#110;&#100;&#97;&#108;&#105;&#117;&#64;&#117;&#46;&#110;&#117;&#115;&#46;&#101;&#100;&#117;"><i class="fas fa-envelope" aria-hidden="true"></i> rundaliu@u.nus.edu</a>
+                    <a href="mailto:Jackup_Liu@outlook.com">Personal email</a>
+                    <a href="https://github.com/Jackupjcup" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                    <a href="/media/documents/runda-liu-cv.pdf" target="_blank" rel="noopener"><i class="fas fa-file-alt" aria-hidden="true"></i> Curriculum Vitae</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+        
+            <div class="row mt-3">
+<div class="col"><div class="card border-0 shadow-sm bg-white"><div class="card-body p-4">
+<div class="row">
+    <section id="education" class="col-lg-6 mb-3">
+        <h6>Education</h6>
+        
+        <div class="media mt-3">
+            <img src="/media/education/nus-crest.svg" alt="National University of Singapore crest" class="education-logo mr-2 mt-1">
+            <div class="media-body">
+                <a class="text-body" href="https://www.nus.edu.sg/" target="_blank" rel="noopener">National University of Singapore</a>
+                <div class="small">M.Sc. in Electrical Engineering</div>
+                
+                <div class="entry-meta education-date-location">
+                    <span>Aug 2026 – Present</span>
+                    <span>Singapore</span>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="media mt-3">
+            <img src="/media/education/xdu-crest.png" alt="Xidian University crest" class="education-logo mr-2 mt-1">
+            <div class="media-body">
+                <a class="text-body" href="https://www.xidian.edu.cn/" target="_blank" rel="noopener">Xidian University</a>
+                <div class="small">B.Eng. in Electronic and Information Engineering</div>
+                
+                <div class="entry-meta education-date-location">
+                    <span>Sep 2022 – Jun 2026</span>
+                    <span>Xi’an, China</span>
+                </div>
+                <div class="small">GPA: 3.8 / 4.0</div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="awards" class="col-lg-6 mb-2">
+        <h6>Honors &amp; Awards</h6>
+        <ul class="small pl-3 mb-0"><li class="mb-2">Outstanding Student of ECE — Class of 2026<div class="text-muted">2026 &middot; NUS (Suzhou) Research Institute</div></li><li class="mb-2">Third Prize, National Undergraduate Mathematics Competition<div class="text-muted">2024 &middot; Shaanxi Province</div></li><li class="mb-2">Third-class Scholarship<div class="text-muted">2022–23 &middot; Xidian University</div></li></ul>
+    </section>
+</div>
+</div></div></div>
+</div>
+
+        
+
+        
+        
+        
+<div class="my-3 p-0 bg-white shadow-sm rounded-xl">
+    <h6 class="border-bottom border-gray p-3 mb-0">
+        <i class="fas fa-star"></i> Selected Publications 
+        <a href="/publications.html">(view all)</a>
+    </h6>
+    
+        
+<article class="row no-gutters publication-entry border-bottom border-gray">
+    
+    <div class="col-md-3 col-xl-2 p-3">
+        <a href="/media/research/papav-teaser.webp" target="_blank" rel="noopener"><img src="/media/research/papav-teaser.webp" alt="PAPAV overview: Perceive, Anticipate, Plan, Act and Verify for computer-use and robot-use." class="w-100 rounded-sm publication-cover" loading="lazy"></a>
+    </div>
+    
+    <div class="col-md-9 col-xl-10 p-3">
+        <h5 class="mt-0 mb-1 font-weight-normal">Survey on Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use</h5>
+        
+        
+        
+        <p class="mb-1 text-muted">A capability-centric perspective on multimodal embodied agents, spanning computer-use and robot-use through Perceive, Anticipate, Plan, Act, and Verify.</p>
+        <p class="small mb-0"><a href="https://github.com/showlab/Awesome-Multimodal-Embodied-Agent" target="_blank" rel="noopener">[Resources]</a> </p>
+    </div>
+</article>
+    
+    
+    <h6 class="d-block p-3 mt-0 text-right">
+        <a href="/publications.html">All publications</a>
+    </h6>
+</div>
+
+
+        
+        <section id="projects" class="my-3 p-0 bg-white shadow-sm rounded-xl">
+    
+    <h6 class="border-bottom border-gray p-3 mb-0"><i class="fas fa-code"></i> Projects <a href="/projects.html">(view all)</a></h6>
+    
+    
+    
+    <article class="row no-gutters project-entry border-bottom border-gray">
+        
+        <div class="col-md-3 p-3">
+            <a href="/media/projects/hmi/demo.webp" target="_blank" rel="noopener">
+                <img src="/media/projects/hmi/demo.webp" alt="Sensor-based arm tracking alongside the corresponding Blender hand animation." class="w-100 rounded-sm project-preview" loading="lazy">
+            </a>
+        </div>
+        
+        <div class="col-md-9 p-3">
+            <h5 class="mt-0 mb-1 font-weight-normal"><a href="https://github.com/Jackupjcup/integrating-sensoring-system-for-HMI" target="_blank" rel="noopener">Textile-Based Sensing for Human–Machine Interaction</a></h5>
+            <p class="small text-muted mb-1">2025.08 - 2026.03 · Suzhou</p>
+            <p class="mb-2 project-summary">A textile-based sensing platform combining a 14 × 10 pressure array and three IMUs for hand posture estimation, gesture recognition, and interactive hand and arm visualization in Blender.</p>
+            <p class="small mb-0"><a href="https://github.com/Jackupjcup/integrating-sensoring-system-for-HMI" target="_blank" rel="noopener">[Code]</a> <a href="/media/projects/hmi/poster.jpg" target="_blank" rel="noopener">[Poster]</a> <a href="/media/projects/hmi/demo.mp4" target="_blank" rel="noopener">[Video]</a></p>
+        </div>
+    </article>
+    
+    <article class="row no-gutters project-entry border-bottom border-gray">
+        
+        <div class="col-12 p-3">
+            <h5 class="mt-0 mb-1 font-weight-normal"><a href="https://github.com/Jackupjcup/Human-3D-2D-Keypoints-Detection" target="_blank" rel="noopener">2D and 3D Human Pose Estimation</a></h5>
+            <p class="small text-muted mb-1">2026.04 - 2026.06 · Suzhou</p>
+            <p class="mb-2 project-summary">Trained an RTMW-based model for 2D and 3D human skeletal pose estimation using 200M paired 2D and 3D human keypoint samples.</p>
+            <p class="small mb-0"><a href="https://github.com/Jackupjcup/Human-3D-2D-Keypoints-Detection" target="_blank" rel="noopener">[Code]</a></p>
+        </div>
+    </article>
+    
+    <article class="row no-gutters project-entry ">
+        
+        <div class="col-md-3 p-3">
+            <a href="/media/projects/depth/comparison.jpg" target="_blank" rel="noopener">
+                <img src="/media/projects/depth/comparison.jpg" alt="RGB input, normalized ground-truth depth, DA3 teacher depth, and student-predicted depth." class="w-100 rounded-sm project-preview" loading="lazy">
+            </a>
+        </div>
+        
+        <div class="col-md-9 p-3">
+            <h5 class="mt-0 mb-1 font-weight-normal"><a href="https://github.com/Jackupjcup/Lightweight_mono_depth_estimation" target="_blank" rel="noopener">Lightweight Monocular Depth Estimation</a></h5>
+            <p class="small text-muted mb-1">2026.06 - 2026.07 · Suzhou</p>
+            <p class="mb-2 project-summary">Distilled a MobileNetV2 student from a DepthAnythingV3 teacher for relative depth estimation, alongside simulation and RGB-depth data collection in Unreal Engine and AirSim.</p>
+            <p class="small mb-0"><a href="https://github.com/Jackupjcup/Lightweight_mono_depth_estimation" target="_blank" rel="noopener">[Code]</a></p>
+        </div>
+    </article>
+    
+    
+    <h6 class="border-top border-gray d-block p-3 mb-0 text-right"><a href="/projects.html">All projects</a></h6>
+    
+</section>
+
+    </div>
+</div>
+</main>
+    <footer class="footer flex-shrink-0 border-top py-2 mt-5 bg-white small">
+    <div class="container-lg">
+        <div class="row my-3">
+            <div class="col-12">
+                <div class="text-muted">
+                    <span class="last-updated">Last updated: 11.2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/vendor/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap.bundle.min.js"></script>
 </body>
 </html>
