@@ -86,7 +86,7 @@ main .bg-white.shadow-sm::after, .navbar::after, .footer::after {
     .navbar-nav { gap: 0; }
     .navbar-nav .nav-link { font-size: 1.125rem; }
     /* Mobile "Menu" button matches the mobile nav links. */
-    .navbar-toggler { padding: 0.5em; font-weight: 500; font-size: 1.125rem; line-height: 1.5; }
+    .navbar-toggler { padding: 0.25em 0.75em; font-weight: 500; font-size: 1.125rem; line-height: 1.25; }
 }
 @media (max-width: 767px) {
     .about-card-body { padding: 24px; }
