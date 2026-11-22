@@ -23,7 +23,7 @@
     font-style: normal;
     font-display: block;
 }
-body { font-family: Pally, Arial, sans-serif; font-size: 16px; font-weight: 400; padding-top: 6.5rem; }
+body { font-family: Pally, Arial, sans-serif; font-size: 16px; font-weight: 400; padding-top: calc(76px + 16px); } /* navbar height + the 16px gap between cards (.my-3 / .mt-3) */
 /* Tanker headings with Pally Regular body text. */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
@@ -80,11 +80,13 @@ main .bg-white.shadow-sm::after, .navbar::after, .footer::after {
     main .bg-white.shadow-sm::after, .navbar::after, .footer::after { display: none; }
 }
 @media (max-width: 575px) {
-    body { padding-top: 5.5rem; }
+    body { padding-top: calc(64px + 16px); }
     .navbar { min-height: 64px; padding: 8px 16px; }
     .navbar-brand { font-size: 1.5rem; }
     .navbar-nav { gap: 0; }
     .navbar-nav .nav-link { font-size: 1.125rem; }
+    /* Mobile "Menu" button matches the mobile nav links. */
+    .navbar-toggler { padding: 0.5em; font-weight: 500; font-size: 1.125rem; line-height: 1.5; }
 }
 @media (max-width: 767px) {
     .about-card-body { padding: 24px; }
